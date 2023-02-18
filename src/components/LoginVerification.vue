@@ -1,28 +1,5 @@
-<script setup>
-const handleClickMini = () => {
-  AMessage.info('hello isboyjc, click mini AButton!')
-};
-
-</script>
 <template>
-  <div>hello isboyjc, This is toolsdog home page!</div>
-  <a-space>
-    <a-button type="primary" size="mini" @click="handleClickMini">Mini</a-button>
-    <a-button type="primary" size="small">Small</a-button>
-    <a-button type="primary">Medium</a-button>
-    <a-button type="primary" size="large">Large</a-button>
-  </a-space>
-
-    <!-- 这里 -->
-    <HelloWorld />
-  <!-- Icon -->
-  <div>
-    <icon-ep-alarm-clock class="" />
-    <icon-home-copy class="" />
-    <icon-home-download class="" />
-  </div>
-
-<!--验证框部分-->
+    <!--验证框部分-->
   <div class="Validation-OuterBorder">
 
     <div class="Validation-Title">请开始验证</div>
@@ -32,22 +9,22 @@ const handleClickMini = () => {
     
     <!-- 拖动条 -->
     <div class="drag">
-        <!-- 操作说明 -->
-        <div class="drag-tips">
-            <span>按住左边按钮向右拖动完成上方图像验证</span>
-        </div>
-        <!-- 可拖动的盒子 -->
-        <div class="drag-child"></div>
+      <!-- 操作说明 -->
+      <div class="drag-tips">
+        <span>按住左边按钮向右拖动完成上方图像验证</span>
+      </div>
+      <!-- 可拖动的盒子 -->
+      <div class="drag-child"></div>
     </div>
   </div>
 
-
-
-
 </template>
 
-<style>
+<script setup>
 
+</script>
+
+<style lang="scss" scoped>
 .Validation-OuterBorder{
   width: 320px;
   height: 280px;
@@ -126,10 +103,4 @@ const handleClickMini = () => {
 }
 
 
-</style>
-<script>
-
-</script>
-
-<style scoped lang="scss">
 </style>
