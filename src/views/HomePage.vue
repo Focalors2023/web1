@@ -129,6 +129,36 @@ const handleClickMini = () => {
 </style>
 <script>
 
+    // 获取元素实例
+const drag = document.querySelector('.drag-child')
+
+// 声明鼠标按下事件
+const dragMouseDown = event => {
+  // 添加鼠标移动事件
+  document.addEventListener('mousemove', dragMouseMove)
+}
+// 监听鼠标移动事件
+const dragMouseMove = event => {
+  // 获取当前 x 轴坐标
+  const { offsetX } = event
+  if (offsetX < 0 || offsetX > 350) {
+    return
+  }
+  // 修改可移动盒子的 x 轴坐标
+  drag.style.transform = `translateX(${offsetX}px)`
+}
+// 结束鼠标监听事件
+const dragMouseUP = event => {
+  // 移除鼠标移动事件
+  document.removeEventListener('mousemove', dragMouseMove)
+}
+
+// 添加鼠标按下事件
+document.addEventListener('mousedown', dragMouseDown)
+// 添加鼠标弹起事件
+document.addEventListener('mouseup', dragMouseUP)
+
+
 </script>
 
 <style scoped lang="scss">
