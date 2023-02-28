@@ -1,12 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Index from '@/views/Index.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(), // hash 模式
   routes: [
     {
       path: '/',
-      name: 'HomePage',
-      component: () => import('@/views/HomePage.vue')
+      component: Index
     }
   ]
 })
