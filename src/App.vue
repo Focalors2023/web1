@@ -1,14 +1,16 @@
 <template>
   <div class="layout">
-    <el-container class="container">
+    <el-container v-if="state.showMenu" class="container">
       <el-aside class="aside">
         <!--系统名称+logo-->
         <div class="head">
           <div>
-            <img src="//s.weituibao.com/1582958061265/mlogo.png" alt="logo">
-            <span>vue3 admin</span>
+            <img
+              src="https://upload-bbs.miyoushe.com/upload/2023/03/01/75276550/93c78d3129fa4a7a9373661f2a4286a1_3051677053170841950.png"
+              alt="logo">
           </div>
         </div>
+        <span class="title">标题</span>
         <!--一条为了美观的线条-->
         <div class="line" />
         <el-menu background-color="#222832" text-color="#fff" :router="true">
@@ -22,7 +24,9 @@
               <el-menu-item index="/"><el-icon>
                   <DataLine />
                 </el-icon>首页</el-menu-item>
-                <el-menu-item index="/add"><el-icon><DataLine /></el-icon>添加商品</el-menu-item>
+              <el-menu-item index="/add"><el-icon>
+                  <DataLine />
+                </el-icon>添加商品</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
@@ -31,26 +35,35 @@
       <el-container class="content">
         <Header />
         <div class="main">
-          <!--将 <router-view></router-view> 移到这里，并且用单标签-->
           <router-view />
         </div>
         <Footer />
       </el-container>
-
+    </el-container>
+    <el-container v-else class="container">
+      <router-view />
     </el-container>
   </div>
   <router-view></router-view>
 </template>
 
-<script scoped>
+<script setup>
+import { reactive } from 'vue'
+import { useRouter } from 'vue-router'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
-export default {
-  name: 'App'
-}
+// 不需要菜单的路径数组
+const noMenu = ['/login']
+const router = useRouter()
+const state = reactive({
+  showMenu: true, // 是否需要显示菜单
+})
+// 监听路由的变化
+router.beforeEach((to) => {
+  state.showMenu = !noMenu.includes(to.path)
+})
 </script>
-
 <style scoped>
 .layout {
   min-height: 100vh;
@@ -70,7 +83,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 150px;
 }
 
 .head>div {
@@ -79,8 +92,8 @@ export default {
 }
 
 .head img {
-  width: 50px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
   margin-right: 10px;
 }
 
@@ -105,6 +118,10 @@ export default {
   height: 100vh;
   overflow: auto;
   padding: 10px;
+}
+
+.title {
+  color: aquamarine;
 }
 </style>
 
