@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="left">
-      <span style="font-size: 20px">{{ state.name }}</span>
+      <span style="font-family: yuanshen">{{ state.name }}</span>
        </div>
      <div class="right">右</div>
   </div>
@@ -14,7 +14,7 @@ const router = useRouter()
 // 声明路由和 title 对应的键值对
 const pathMap = {
   index: '首页',
-  add: '添加商品'
+  add: '版本更新'
 }
 const state = reactive({
   name: '首页'

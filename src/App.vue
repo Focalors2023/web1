@@ -19,7 +19,7 @@
           <!--一级栏目-->
           <el-sub-menu index="1">
             <template #title>
-              <span>Dashboard</span>
+              <span>原神社区</span>
             </template>
             <!--二级栏目-->
             <el-menu-item-group>
@@ -28,7 +28,7 @@
                 </el-icon>首页</el-menu-item>
               <el-menu-item index="/add"><el-icon>
                   <DataLine />
-                </el-icon>添加商品</el-menu-item>
+                </el-icon>版本更新</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
           <el-sub-menu index="2">
@@ -37,6 +37,9 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/swiper"><el-icon><Picture /></el-icon>轮播图配置</el-menu-item>
+              <el-menu-item index="/hot"><el-icon><StarFilled /></el-icon>热销商品配置</el-menu-item>
+              <el-menu-item index="/new"><el-icon><Sell /></el-icon>新品上线配置</el-menu-item>
+              <el-menu-item index="/recommend"><el-icon><ShoppingCart /></el-icon>为你推荐配置</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>

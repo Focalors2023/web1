@@ -17,7 +17,7 @@ export function localRemove (key) {
   export const pathMap = {
     index: '首页',
     login: '登录',
-    add: '添加商品',
+    add: '版本更新',
     swiper: '轮播图配置'
   }
   export const uploadImgServer = 'http://backend-api-02.newbee.ltd/manage-api/v1/upload/file'
