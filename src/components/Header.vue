@@ -4,6 +4,7 @@
       <span style="font-family: yuanshen">{{ state.name }}</span>
        </div>
      <div class="right">右</div>
+     
   </div>
 </template>
 <script setup>
@@ -30,7 +31,7 @@ router.afterEach((to) => {
   
 <style scoped>
 .header {
-    height: 50px;
+    height: 60px;
     border-bottom: 1px solid #e9e9e9;
     display: flex;
     justify-content: space-between;
