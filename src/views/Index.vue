@@ -33,6 +33,39 @@
           <component :is="currentTab" class="tab"></component>
         </div>
       </div>
+      <div class="news">
+        <h4>最新新闻</h4>
+        <a href="https://ys.mihoyo.com/main/news/detail/26765">
+          <div class="new1">
+            <div class="new-picture1">
+              <img src="https://webstatic.mihoyo.com/upload/static-resource/2023/03/16/d2004c029c037a7d3b0bcddde2c95e10_4652844505751540441.png" />
+              <div style="font-family: yuanshen" class="new-title">「我…我来为队伍探路！」——「晴霜的标绘」·米卡</div> 
+              <div class="new-date-num">2023/03/17</div>
+              <div class="new-date-type">新闻</div>
+            </div>
+          </div>
+        </a>
+        <a href="https://ys.mihoyo.com/main/news/detail/25804">
+          <div class="new2">
+            <div class="new-picture2">
+              <img src="https://webstatic.mihoyo.com/upload/contentweb/2023/01/16/7ed362d946e752c5d4c82c7d5a4174e7_7311698904634466014.jpg" alt="">
+              <div style="font-family: yuanshen" class="new-title">翎羽如穗，绘摹殊境</div>
+              <div class="new-date-num">2023/03/17</div>
+              <div class="new-date-type">新闻</div>
+            </div>
+         </div>  
+        </a>
+        <a href="https://ys.mihoyo.com/main/news/detail/26768">
+          <div class="new3">
+            <div class="new-picture3">
+              <img src="https://webstatic.mihoyo.com/upload/contentweb/2023/03/17/dba71c4b7796698d50d49efd7c46a7b3_2963100425049468016.jpg"/>
+              <div style="font-family: yuanshen" class="new-title">《原神》角色演示-「米卡：绘羽的领行」</div>
+              <div class="new-date-num">2023/03/17</div>
+              <div class="new-date-type">新闻</div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div> 
 </template>
@@ -63,9 +96,106 @@ export default {
 }*/
  
 /*主体部分*/
-span {
-  font-size: 25px;
+.new1 img {
+  transition: transform .5s ease;
 }
+
+.new1:hover img {
+  transform: scale(1.2);
+}
+
+.new2 img {
+  transition: transform .5s ease;
+}
+
+.new2:hover img {
+  transform: scale(1.2);
+}
+.new3 img {
+  transition: transform .5s ease;
+}
+
+.new3:hover img {
+  transform: scale(1.2);
+}
+.new1 {
+  position: relative;
+  left: 10px;
+  border-radius: 8px;
+  width: 380px;
+  height: 390px;
+  background-color: #5d5d5d8e;
+}
+.new2 {
+  position: relative;
+  left:410px;
+  top:-390px;
+  border-radius: 8px;
+  width: 380px;
+  height: 390px;
+  background-color: #5d5d5d8e;
+}
+.new3 {
+  position: relative;
+  left:810px;
+  top:-780px;
+  border-radius: 8px;
+  width: 380px;
+  height: 390px;
+  background-color: #5d5d5d8e;
+}
+.new-picture1 {
+  position: absolute;
+  background-size: 100% 100%;
+  width: 360px;
+  height: 180px;
+  background-color: aqua;
+  margin-top:20px;
+  margin-left:10px;
+}
+.new-picture2 {
+  position: absolute;
+  background-size: 100% 100%;
+  width: 360px;
+  height: 180px;
+  background-color: aqua;
+  margin-top:20px;
+  margin-left:10px;
+}
+.new-picture3 {
+  position: absolute;
+  background-size: 100% 100%;
+  width: 360px;
+  height: 180px;
+  background-color: aqua;
+  margin-top:20px;
+  margin-left:10px;
+}
+img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.news {
+  margin-top:500px;
+  width:1200px;
+  height:450px;
+   background-color: #76a5e7;
+}
+.new-date-num {
+  font-size: 15px;
+  position: absolute;
+  top: 340px;
+  color: #a6a6a6;
+}
+.new-date-type {
+  right: 2px;
+  font-size: 15px;
+  position: absolute;
+  top: 340px;
+  color: #c07a00;
+}
+
 .frame { 
   width: 100%;
   height: 100%;
@@ -80,7 +210,7 @@ span {
   position: absolute;
   margin-top:-50px;
   margin-left:30px;
-  height: 400px;
+  height: 1400px;
   width:1200px;
 }
 .carousel {
