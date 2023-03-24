@@ -39,30 +39,30 @@
           <div class="new1">
             <div class="new-picture1">
               <img src="https://webstatic.mihoyo.com/upload/static-resource/2023/03/16/d2004c029c037a7d3b0bcddde2c95e10_4652844505751540441.png" />
-              <div style="font-family: yuanshen" class="new-title">「我…我来为队伍探路！」——「晴霜的标绘」·米卡</div> 
-              <div class="new-date-num">2023/03/17</div>
-              <div class="new-date-type">新闻</div>
             </div>
+            <div style="font-family: yuanshen" class="new-title">「我…我来为队伍探路！」——「晴霜的标绘」·米卡</div> 
+            <div class="new-date-num">2023/03/17</div>
+            <div class="new-date-type">新闻</div>
           </div>
         </a>
         <a href="https://ys.mihoyo.com/main/news/detail/25804">
           <div class="new2">
             <div class="new-picture2">
               <img src="https://webstatic.mihoyo.com/upload/contentweb/2023/01/16/7ed362d946e752c5d4c82c7d5a4174e7_7311698904634466014.jpg" alt="">
+            </div>
               <div style="font-family: yuanshen" class="new-title">翎羽如穗，绘摹殊境</div>
               <div class="new-date-num">2023/03/17</div>
-              <div class="new-date-type">新闻</div>
-            </div>
+              <div class="new-date-type">新闻</div>          
          </div>  
         </a>
         <a href="https://ys.mihoyo.com/main/news/detail/26768">
           <div class="new3">
             <div class="new-picture3">
               <img src="https://webstatic.mihoyo.com/upload/contentweb/2023/03/17/dba71c4b7796698d50d49efd7c46a7b3_2963100425049468016.jpg"/>
-              <div style="font-family: yuanshen" class="new-title">《原神》角色演示-「米卡：绘羽的领行」</div>
-              <div class="new-date-num">2023/03/17</div>
-              <div class="new-date-type">新闻</div>
             </div>
+            <div style="font-family: yuanshen" class="new-title">《原神》角色演示-「米卡：绘羽的领行」</div>
+            <div class="new-date-num">2023/03/17</div>
+            <div class="new-date-type">新闻</div>
           </div>
         </a>
       </div>
@@ -96,6 +96,13 @@ export default {
 }*/
  
 /*主体部分*/
+.new-title {
+  margin-left:10px;
+  margin-top:210px;
+  position: absolute;
+
+
+}
 .new1 img {
   transition: transform .5s ease;
 }
@@ -145,6 +152,7 @@ export default {
   background-color: #5d5d5d8e;
 }
 .new-picture1 {
+  overflow: hidden;
   position: absolute;
   background-size: 100% 100%;
   width: 360px;
@@ -154,6 +162,7 @@ export default {
   margin-left:10px;
 }
 .new-picture2 {
+  overflow: hidden;
   position: absolute;
   background-size: 100% 100%;
   width: 360px;
@@ -163,6 +172,7 @@ export default {
   margin-left:10px;
 }
 .new-picture3 {
+  overflow: hidden;
   position: absolute;
   background-size: 100% 100%;
   width: 360px;
@@ -183,16 +193,17 @@ img {
    background-color: #76a5e7;
 }
 .new-date-num {
+  left: 10px;
   font-size: 15px;
   position: absolute;
-  top: 340px;
+  top: 360px;
   color: #a6a6a6;
 }
 .new-date-type {
-  right: 2px;
+  right: 10px;
   font-size: 15px;
   position: absolute;
-  top: 340px;
+  top: 360px;
   color: #c07a00;
 }
 
