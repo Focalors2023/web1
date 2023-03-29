@@ -9,28 +9,12 @@
       <div class="carousel">
         <el-carousel indicator-position="outside">
           <el-carousel-item v-for="item in 4" :key="item">
-           
           </el-carousel-item>
         </el-carousel>
       </div>
       <div class="demo">
         <div class="title">
-          <button
-            v-for="tab in tabs"
-            :key="tab"
-            :class="['tab-button', { active: currentTab === tab }]"
-            @click="currentTab = tab"
-          >
-            {{ tab }}
-          </button>
-          <ul>  
-            <span style="font-family: yuanshen">活动</span>
-            <span style="font-family: yuanshen">公告</span>
-            <span style="font-family: yuanshen">资讯</span>
-          </ul>
-        </div>
-        <div class="text">
-          <component :is="currentTab" class="tab"></component>
+          <DynamicComponent />
         </div>
       </div>
       <div class="news">
@@ -66,20 +50,24 @@
           </div>
         </a>
       </div>
+      <div class="content">
+        <content />
+      </div>
     </div>
   </div> 
 </template>
   
 <script>
-import activities from '../components/activities.vue';
-import announcement from '../components/announcement.vue';
-import info from '../components/info.vue'
+
+import DynamicComponent from '../components/DynamicComponent.vue'
+import content from '../components/content.vue'
 
 export default {
   components: {
-    activities,
-    announcement,
-    info,
+
+    DynamicComponent,
+    content,
+    
   },
   data() {
     return {
@@ -96,6 +84,14 @@ export default {
 }*/
  
 /*主体部分*/
+.content {
+  background-color: #e1e0ff;
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+  margin-top:50px;
+  margin-left:90px;
+}
 .new-title {
   margin-left:10px;
   margin-top:210px;
@@ -182,6 +178,7 @@ export default {
   margin-left:10px;
 }
 img {
+  position: relative;
   object-fit: fill;
   width: 100%;
   height: 100%;
@@ -217,27 +214,26 @@ img {
   background-color: rgba(255, 255, 255, 0.3)
 }
 .main {
+  border: 3px solid black;
   background-color:#eef6ff;
   position: absolute;
   margin-top:-50px;
-  margin-left:30px;
-  height: 1400px;
-  width:1200px;
+  left:100px;
+  height: 2400px;
+  width:1400px;
 }
 .carousel {
   height: 260px;
   width: 650px;
   background-color: #bcdf88;
   position: absolute;
-  margin-top:50px;
   margin-left:30px;
 }
 
 .title {
   position: absolute;
   margin-left:720px;
-  margin-top:50px;
-  height: 60px;
+  height: 300px;
   width: 450px;
   background-color: #e1e0ff;
 }
