@@ -53,6 +53,9 @@
       <div class="content">
         <content />
       </div>
+      <div class="illustratedHandbook">
+        <illustratedHandbook />
+      </div>
     </div>
   </div> 
 </template>
@@ -61,10 +64,11 @@
 
 import DynamicComponent from '../components/DynamicComponent.vue'
 import content from '../components/content.vue'
+import illustratedHandbook from '../components/illustratedHandbook.vue'
 
 export default {
   components: {
-
+    illustratedHandbook,
     DynamicComponent,
     content,
     
@@ -84,6 +88,13 @@ export default {
 }*/
  
 /*主体部分*/
+.illustratedHandbook {
+  background-color: #c7ffef;
+  width: 1000px;
+  height: 700px;
+  position: absolute;
+  left: 90px;
+}
 .content {
   background-color: #e1e0ff;
   width: 1000px;
@@ -96,8 +107,6 @@ export default {
   margin-left:10px;
   margin-top:210px;
   position: absolute;
-
-
 }
 .new1 img {
   transition: transform .5s ease;
@@ -219,8 +228,8 @@ img {
   position: absolute;
   margin-top:-50px;
   left:100px;
-  height: 2400px;
-  width:1400px;
+  height: 2800px;
+  width:1200px;
 }
 .carousel {
   height: 260px;
