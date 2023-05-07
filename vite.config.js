@@ -18,6 +18,9 @@ export default ({ mode }) => defineConfig({
       }),
       ElementPlus()
     ],
+    build: {
+      reportMode: 'summary'
+    },
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './'),
@@ -35,6 +38,5 @@ export default ({ mode }) => defineConfig({
         }
       }
     },
-    
-  //base: mode == 'development' ? './' : (mode == 'beta' ? '//s.baidu.com/beta/xxx' : '//s.baidu.com/release/xxx') // 静态资源路径配置
+   base: mode == 'development' ? './' : (mode == 'beta' ? '//s.baidu.com/beta/xxx' : '//s.baidu.com/release/xxx') // 静态资源路径配置
 })
